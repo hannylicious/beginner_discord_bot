@@ -1,5 +1,13 @@
-This is a basic practice bot for discord using the discord.py library!
+These are practice bots for discord using different technologies:
 
+* The discord.py library for Python
+* The discordnim library for Nim
+
+# botzilla.py
+```console
+$ pip install requirements.txt
+$ python botzilla.py
+```
 
 # botzilla.nim
 
