@@ -5,7 +5,7 @@ These are practice bots for discord using different technologies:
 
 # botzilla.py
 ```console
-$ pip install requirements.txt
+$ pip install discord.py
 $ python botzilla.py
 ```
 
