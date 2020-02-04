@@ -1,6 +1,7 @@
 import discord
 import logging
 import os
+import requests
 
 from discord.ext import commands
 
@@ -37,6 +38,19 @@ async def ping(ctx):
     This is the sample text
     """
     await ctx.send(f"Pong! {round(client.latency * 1000)}ms")
+
+@client.command()
+async def cereals(ctx):
+    """
+    Get a list of cereals
+    """
+    URL = "http://localhost:8000/api/cereals/"
+    request = requests.get(url=URL)
+    cereals = request.json()
+    for cereal in cereals:
+        cereal_name = cereal["name"]
+        await ctx.send(f"{cereal_name}")
+
 
 @client.command()
 async def join(ctx):
